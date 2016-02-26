@@ -1,0 +1,57 @@
+# Schema for SDSS table subset
+filters: {complevel: 5, complib: blosc}
+schema:
+  common:
+    primary_key: objID
+    spatial_keys: [ra, dec]
+    columns:
+    - [objID, u8]
+    - [run, u4]
+    - [rerun, a3]
+    - [camcol, u4]
+    - [field, u4]
+    - [ID, u4]
+    - [objc_type, u4]
+    - [objc_flags, u4]
+    - [objc_flags2, u4]
+    - [zhedflag, i2]
+    - [objc_rowc, f4]
+    - [colc, 5f4]
+    - [flags, 5u4]
+    - [flags2, 5u4]
+    - [ra, f8]
+    - [dec, f8]
+  photometry:
+    columns:
+    - [skyflux, 5f4]
+    - [psfflux, 5f4]
+    - [psfflux_ivar, 5f4]
+    - [modelflux, 5f4]
+    - [modelflux_ivar, 5f4]
+    - [extinction, 5f4]
+    - [aperflux6, 5f4]
+  image:
+    columns:
+    - [psp_status, 5u4]
+    - [psf_fwhm, 5f4]
+    - [thing_ID, u4]
+    - [ifield, u4]
+    - [balkan_id, u4]
+    - [ndetect, i2]
+    - [calib_status, 5i2]
+    - [nmgypercount, 5f4]
+  tmass:
+    columns:
+    - [tmass_j, f4]
+    - [tmass_j_ivar, f4]
+    - [tmass_h, f4]
+    - [tmass_h_ivar, f4]
+    - [tmass_k, f4]
+    - [tmass_k_ivar, f4]
+    - [tmass_ph_qual, a3]
+    - [tmass_rd_flg, i2]
+    - [tmass_bl_flg, i2]
+    - [tmass_cc_flg, a3]
+    - [tmass_gal_contam, u1]
+    - [tmass_mp_flg, u1]
+    - [tmass_jdate, f8]
