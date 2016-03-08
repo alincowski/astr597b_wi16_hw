@@ -1,0 +1,29 @@
+# Schema for TESS table subset
+filters: {complevel: 5, complib: blosc}
+schema:
+  common:
+    primary_key: tessID
+    spatial_keys: [raj2000, dej2000]
+    columns:
+    - [tessID, u8]
+    - [raj2000, f8]
+    - [dej2000, f8]
+    - [rp, f4]
+    - [per, f8]
+    - [s, f4]
+    - [k, f4]
+    - [r_, f4]
+    - [teff, f4]
+  photometry:
+    columns:
+    - [vmag, f4]
+    - [imag, f4]
+    - [jmag, f4]
+    - [ksmag, f4]
+  statistics:
+    columns:
+    - [dm, f4]
+    - [dil, f4]
+    - [logsigv, f4]
+    - [snr, f8]
+    - [mult, u8]
